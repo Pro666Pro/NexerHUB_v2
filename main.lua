@@ -30,7 +30,7 @@ local Tab1 = Window:MakeTab({
 })
 
 Tab1:AddButton({
-    Name = "Unlimited Stamina",
+    Name = "Bypass Stamina { Unlimited Stamina }",
     Callback = function()
 if hookmetamethod then
 local StaminaBypass;
@@ -40,9 +40,28 @@ StaminaBypass = hookmetamethod(game, "__index", function(self, v)
             end
             return StaminaBypass(self, v)
 end)
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Successfully bypassed sprint",Icon = "rbxassetid://7733658504",Duration = 5})
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Successfully bypassed SprintToggle",Icon = "rbxassetid://7733658504",Duration = 5})
 else
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Speed bypass isn't possible on your executor, be careful",Icon = "rbxassetid://7733658504",Duration = 5})
+end
+    end
+})
+
+Tab1:AddButton({
+    Name = "Bypass Death { God Mode }",
+    Callback = function()
+if hookmetamethod then
+local deathbypass;
+    deathbypass = hookmetamethod(game, "__namecall", function(method, ...) 
+        if getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.Events.DeathEvent then
+            return
+        end
+        return deathbypass(method, ...)
+    end)
+AntiCheatTick:Destroy()
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Successfully bypassed DeathEvent",Icon = "rbxassetid://7733658504",Duration = 5})
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Death bypass isn't possible on your executor, be careful",Icon = "rbxassetid://7733658504",Duration = 5})
 end
     end
 })
@@ -66,14 +85,14 @@ Tab2:AddButton({
 
        for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
         if k:IsA("Model") then
-            local room = k
+            local roomm = k
             for _,v in pairs(room:FindFirstChild("Monsters"):GetChildren()) do
-                local folder = v
+                local folderr = v
                 runservice.Heartbeat:Connect(function()
                     for _, v in pairs(folder:GetChildren()) do
                         repeat Wait() until v
                         if not v:FindFirstChild("esp") then
-                            local espclone = esp:Clone()
+                            local espclonee = esp:Clone()
                             espclone.Adornee = v
                             espclone.Parent = v
                         end
@@ -92,14 +111,14 @@ Tab2:AddButton({
 
        for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
         if k:IsA("Model") then
-            local room = k
+            local roommm = k
             for _,v in pairs(room:FindFirstChild("Items"):GetChildren()) do
-                local folder = v
+                local folderrr = v
                 runservice.Heartbeat:Connect(function()
                     for _, v in pairs(folder:GetChildren()) do
                         repeat Wait() until v
                         if not v:FindFirstChild("esp") then
-                            local espclone = esp:Clone()
+                            local espcloneee = esp:Clone()
                             espclone.Adornee = v
                             espclone.Parent = v
                         end

@@ -1,5 +1,5 @@
-local stamina = game.ReplicatedStorage.PlayerData[player.UserId].SprintToggle
-local AntiCheatTick = game.ReplicatedStorage.PlayerData[player.UserId].AntiCheatTick
+local stamina = game.ReplicatedStorage.PlayerData[""..player.UserId..""].SprintToggle
+local AntiCheatTick = game.ReplicatedStorage.PlayerData[""..player.UserId..""].AntiCheatTick
 
 if game.PlaceId == 16552821455 then
 if hookmetamethod then

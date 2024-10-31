@@ -23,8 +23,36 @@ local Window = OrionLib:MakeWindow({IntroText = "Dandy World", IntroIcon = "rbxa
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
-local Tab1 = Window:MakeTab({
+local Tab = Window:MakeTab({
 	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab1:AddButton({
+    Name = "Get All Items",
+    Callback = function()
+
+    end
+})
+
+Tab1:AddToggle({
+    Name = "Auto Grab Items",
+    Default = false,
+    Callback = function(Value)
+_G.AutoGrab = Value
+while _G.AutoGrab == true do
+for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.ClassName == "ProximityPrompt" then
+                fireproximityprompt(v)
+            end
+        end
+end
+    end
+})
+	
+local Tab1 = Window:MakeTab({
+	Name = "Bypass",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -85,9 +113,9 @@ Tab2:AddButton({
 
        for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
         if k:IsA("Model") then
-            local roomm = k
+            local room = k
             for _,v in pairs(room:FindFirstChild("Monsters"):GetChildren()) do
-                local folderr = v
+                local folder = v
                 runservice.Heartbeat:Connect(function()
                     for _, v in pairs(folder:GetChildren()) do
                         repeat Wait() until v
@@ -111,14 +139,14 @@ Tab2:AddButton({
 
        for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
         if k:IsA("Model") then
-            local roommm = k
+            local room = k
             for _,v in pairs(room:FindFirstChild("Items"):GetChildren()) do
-                local folderrr = v
+                local folder = v
                 runservice.Heartbeat:Connect(function()
                     for _, v in pairs(folder:GetChildren()) do
                         repeat Wait() until v
                         if not v:FindFirstChild("esp") then
-                            local espcloneee = esp:Clone()
+                            local espclone = esp:Clone()
                             espclone.Adornee = v
                             espclone.Parent = v
                         end
@@ -156,5 +184,88 @@ Tab2:AddButton({
         
     end
 })
+
+local Tab3 = Window:MakeTab({
+	Name = "Destroy",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab3:AddButton({
+    Name = "Destroy Monsters",
+    Callback = function()
+
+       for _,q in pairs(game.Workspace.CurrentRoom:GetChildren()) do
+        if q:IsA("Model") then
+            local Floor = q
+            local Monsters = game.Workspace.CurrentRoom[q].Monsters
+	    wait(0.3)
+	    Monsters:Destroy()
+	    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Monsters Destroyed,Icon = "rbxassetid://7733658504",Duration = 5})
+        end
+       end
+        
+    end
+})
+
+local Tab4 = Window:MakeTab({
+	Name = "Local Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab4:AddSlider({
+	Name = "WalkSpeed",
+	Min = 20,
+	Max = 500,
+	Default = 20,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WalkSpeed",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Tab4:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 500,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "JumpPower",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+Tab5:AddSlider({
+	Name = "Hip Height",
+	Min = 0,
+	Max = 100,
+	Default = 0,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Hip Height",
+	Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = Value
+	end    
+})
+
+Tab5:AddSlider({
+	Name = "Gravity",
+	Min = 0,
+	Max = 600,
+	Default = 196,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Gravity",
+	Callback = function(Value)
+game.Workspace.Gravity = Value
+	end    
+})
+
+			
 
 end

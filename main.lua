@@ -55,6 +55,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
+Tab:AddButton({
+    Name = "Get All Weapons",
+    Callback = function()
+local code = game.Workspace["AREA51"].CodeModel.Code.Value
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Code Awarded",Text = ""..game.Players.LocalPlayer.Character.Name.." got Area 51 Code! Code is "..game.Workspace["AREA51"].CodeModel.Code.Value.."!" ,Duration = 5, Icon = "rbxthumb://type=Asset&id=206410289&w=150&h=150"})
+    end
+})
+
 local Tab1 = Window:MakeTab({
 	Name = "Weapons",
 	Icon = "rbxassetid://4483345998",
@@ -238,47 +246,241 @@ local Tab2 = Window:MakeTab({
 })
 
 Tab2:AddButton({
-    Name = "Teleport Atomic Bomb",
+    Name = "Get Badge Atomic Bomb",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.AtomicBomb.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
 Tab2:AddButton({
-    Name = "Teleport Cleaner Two",
+    Name = "Get Badge Cleaner Two",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.CleanerTwo.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
 Tab2:AddButton({
-    Name = "Teleport Execution Room",
+    Name = "Get Badge Execution Room",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.ExecutionRoom.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
 Tab2:AddButton({
-    Name = "Teleport Helpful Killers",
+    Name = "Get Badge Helpful Killers",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.HelpfulKillers.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
 Tab2:AddButton({
-    Name = "Teleport The Ultimate Secret",
+    Name = "Get Badge Ultimate Secret",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.TheUltimateSecret.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
 Tab2:AddButton({
-    Name = "Teleport The Way Out",
+    Name = "Get Badge Way Out",
     Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].Badges.TheWayOut.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 
+Tab2:AddButton({
+    Name = "Get Badge Alien Exit",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].AlienExit.Reward.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab2:AddButton({
+    Name = "Get Badge Alien Exit",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].AlienExit.Reward.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+local Tab4 = Window:MakeTab({
+	Name = "Papers",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 1",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].AlienLabRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 2",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].ComputingRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 3",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].GarbageSewer.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 4",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].MachineryRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 5",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].MeetingRoom.DeadGuy.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 6",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].MeetingRoom.DeadGuy.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 7",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].OfficeRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 8",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].PrototypMeetingRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 9",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].RadioactiveArea.Floor1.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 10",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].RejectRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 11",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].ResearchOffice.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 12",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].SecretCleanerRoom.Table.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 13",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].SecretCleanerRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 13",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].WasteRoom.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+
+Tab4:AddButton({
+    Name = "Auto-Get Paper 14",
+    Callback = function()
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace["AREA51"].YellowBedRoom.Buro.Paper.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
+    end
+})
+	
 local Tab3 = Window:MakeTab({
 	Name = "Destroy",
 	Icon = "rbxassetid://4483345998",

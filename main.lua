@@ -29,8 +29,8 @@ local Tab1 = Window:MakeTab({
 Tab1:AddButton({
     Name = "Get AK-47",
     Callback = function()
-firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest.Parent, 0)
-firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest.Parent, 1)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest, 1)
     end
 })
 			

@@ -1,6 +1,6 @@
 if game.PlaceId == 2092166489 then
 
-local GameName = "Area 51 - by nexer"
+local GameName = "Area 51 - by nexer1234"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({IntroText = "Area 51 - by nexer", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})

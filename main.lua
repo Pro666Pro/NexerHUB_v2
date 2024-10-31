@@ -1,5 +1,3 @@
-local playerID = player.UserId
-wait(0.1)
 local stamina = game.ReplicatedStorage.PlayerData[player.UserId].SprintToggle
 local AntiCheatTick = game.ReplicatedStorage.PlayerData[player.UserId].AntiCheatTick
 

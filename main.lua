@@ -1,7 +1,7 @@
+if game.PlaceId == 16552821455 then
 local stamina = game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].SprintToggle
 local AntiCheatTick = game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].AntiCheatTick
 
-if game.PlaceId == 16552821455 then
 if hookmetamethod then
 local bypass;
     bypass = hookmetamethod(game, "__namecall", function(method, ...) 
@@ -33,21 +33,6 @@ Tab:AddButton({
     Name = "Get All Items",
     Callback = function()
 print("llol")
-    end
-})
-
-Tab:AddToggle({
-    Name = "Auto Grab Items",
-    Default = false,
-    Callback = function(Value)
-_G.AutoGrab = Value
-while _G.AutoGrab == true do
-for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
-            if v.ClassName == "ProximityPrompt" then
-                fireproximityprompt(v)
-            end
-        end
-end
     end
 })
 	
@@ -266,6 +251,41 @@ game.Workspace.Gravity = Value
 	end    
 })
 
-			
+elseif game.PlaceId == 2092166489 then
 
+
+local GameName = "Area 51 - by nexer"
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({IntroText = "Area 51", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+
+OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Main",
+    Callback = function()
+print("llol")
+    end
+})
+
+local Tab1 = Window:MakeTab({
+	Name = "Weapons",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab1:AddButton({
+    Name = "Get AK-47",
+    Callback = function()
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.Weapons["AK-47"].Hitbox.TouchInterest.Parent, 0)
+firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.Lobby.Teleport1.TouchInterest.Parent, 1)
+    end
+})
+			
 end

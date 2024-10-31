@@ -118,81 +118,6 @@ Tab2:AddButton({
     end
 })
 
-Tab2:AddButton({
-    Name = "ESP Items",
-    Callback = function()
-
-       for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
-        if k:IsA("Model") then
-            local room = k
-            for _,v in pairs(room:FindFirstChild("Items"):GetChildren()) do
-                local folder = v
-                runservice.Heartbeat:Connect(function()
-                    for _, v in pairs(folder:GetChildren()) do
-                        repeat Wait() until v
-                        if not v:FindFirstChild("esp") then
-                            local espclone = esp:Clone()
-                            espclone.Adornee = v
-                            espclone.Parent = v
-                        end
-                    end
-                end)
-            end
-        end
-       end
-        
-    end
-})
-
-Tab2:AddButton({
-    Name = "ESP Generators",
-    Callback = function()
-
-       for _,k in pairs(game.Workspace.CurrentRoom:GetChildren()) do
-        if k:IsA("Model") then
-            local room = k
-            for _,v in pairs(room:FindFirstChild("Generators"):GetChildren()) do
-                local folder = v
-                runservice.Heartbeat:Connect(function()
-                    for _, v in pairs(folder:GetChildren()) do
-                        repeat Wait() until v
-                        if not v:FindFirstChild("esp") then
-                            local espclone = esp:Clone()
-                            espclone.Adornee = v
-                            espclone.Parent = v
-                        end
-                    end
-                end)
-            end
-        end
-       end
-        
-    end
-})
-
-local Tab3 = Window:MakeTab({
-	Name = "Destroy",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab3:AddButton({
-    Name = "Destroy Monsters",
-    Callback = function()
-
-       for _,q in pairs(game.Workspace.CurrentRoom:GetChildren()) do
-        if q:IsA("Model") then
-            local Floor = q
-            local Monsters = game.Workspace.CurrentRoom[q].Monsters
-	    wait(0.3)
-	    Monsters:Destroy()
-	    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Monsters Destroyed,Icon = "rbxassetid://7733658504",Duration = 5})
-        end
-       end
-        
-    end
-})
-
 local Tab4 = Window:MakeTab({
 	Name = "Local Player",
 	Icon = "rbxassetid://4483345998",
@@ -252,7 +177,6 @@ game.Workspace.Gravity = Value
 })
 
 elseif game.PlaceId == 2092166489 then
-
 
 local GameName = "Area 51 - by nexer"
 

@@ -29,7 +29,7 @@ local Tab1 = Window:MakeTab({
 Tab1:AddButton({
     Name = "Get AK-47",
     Callback = function()
-fireproximityprompt(workspace.Weapons["AK-47"].Hitbox.ProximityPrompt)
+fireproximityprompt(workspace.Weapons["AK-47"].Hitbox.ProximityPrompt.Parent)
     end
 })
 			

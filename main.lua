@@ -14,9 +14,44 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-    Name = "Main",
+    Name = "Get All Weapons",
     Callback = function()
-print("llol")
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["AK-47"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["AN-94"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons.AWP.Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["Colt Anaconda"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["DB Shotgun"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["Desert Eagle"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons.Flamethrower.Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["G36C"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["M1014"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["M14"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["M16A2/M203"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["M4A1"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["MP5k"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["P90"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["R870"].Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons.RayGun.Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons.SVD.Hitbox.CFrame
+wait(0.0000001)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 

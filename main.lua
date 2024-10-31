@@ -29,14 +29,14 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab1:AddButton({
+Tab:AddButton({
     Name = "Get All Items",
     Callback = function()
-
+print("llol")
     end
 })
 
-Tab1:AddToggle({
+Tab:AddToggle({
     Name = "Auto Grab Items",
     Default = false,
     Callback = function(Value)

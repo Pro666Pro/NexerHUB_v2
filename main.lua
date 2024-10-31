@@ -3,7 +3,7 @@ if game.PlaceId == 2092166489 then
 local GameName = "Area 51 - by nexer1234"
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({IntroText = "Area 51 - by nexer", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
+local Window = OrionLib:MakeWindow({IntroText = "Area 51 - by nexer1234", IntroIcon = "rbxassetid://15315284749",Name = GameName, HidePremium = false, SaveConfig = true, ConfigFolder = "Tutorial"})
 
 OrionLib:MakeNotification({Name = "Warning",Content = "Use at your own risk.",Image = "rbxassetid://7733658504",Time = 5})
 
@@ -29,8 +29,9 @@ local Tab1 = Window:MakeTab({
 Tab1:AddButton({
     Name = "Get AK-47",
     Callback = function()
-firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest, 0)
-firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game.Workspace.Weapons["AK-47"].Hitbox.TouchInterest, 1)
+local OldPlace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Weapons["AK-47"].Hitbox.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = OldPlace
     end
 })
 			
